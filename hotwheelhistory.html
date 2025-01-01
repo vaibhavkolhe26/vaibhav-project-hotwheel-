@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>hotwheel-history</title>
+    <link rel="website icon" type="png" href="hotwheel.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="hotwheellogo" style="mix-blend-mode: multiply;" src="hotwheel.png" alt="" width="160" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a target="_parent" href="index.html" class="btn btn-warning btn-outline-danger" style="border:none; font-weight: bold; height: 40px;">HOME</a>
+                        </li>
+                        <li class="nav-item dropdown" style="margin-left: 8%;">
+                            <button type="button" class="btn btn-warning btn-outline-danger nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border:none; font-weight: bold; height: 40px; color: white;">SHOP</button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(246, 83, 83);">
+                                <li><a class="dropdown-item" style="font-weight: bolder;" target="_parent" href="mainline.html">CARS</a></li>
+                                <li><a class="dropdown-item" style="font-weight: bolder;"  target="_parent" href="monstertruck.html">MONSTER TRUCKS</a></li>
+                                <li><a class="dropdown-item" style="font-weight: bolder;" target="_parent" href="mainline.html">TRACK SETS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" style="font-weight: bolder;" target="_parent" href="f&f.html">HOTWHEELS MOST POPULAR</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" style="margin-left: 8%;">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="border:none; font-weight: bold; height: 40px;">SERIES</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="mainline.html" style="font-weight: bolder;">Current-series 2025-D</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" style="width: 270px; border: 2px solid black;" type="search" placeholder="What are you looking for?" aria-label="Search">
+                        <button type="button" class="btn btn-warning btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="border:none; font-weight: bold; height: 40px;">Log in</button>
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="border-radius: 30px;">
+                                    <div class="modal-header" style="height: 70px;">
+                                        <a class="navbar-brand" href="#">
+                                            <img class="hotwheellogo" src="hotwheel.png" alt="" width="140px" height="70px" style="margin-left: 160px;">
+                                        </a>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3 style="text-align: center; font-style: italic; font-weight: bold;">Log In</h3>
+                                        <p style="text-align: center;">Login to your Hot Wheels account</p>
+                                        <div class="input-group flex-nowrap">
+                                            <div class="input" style="margin-left: 30px;">
+                                                <input type="text" class="form-control" placeholder="Username or @email" name="username" aria-label="Username" aria-describedby="addon-wrapping" style="width: 300px;">
+                                            </div>
+                                        </div>
+                                        <div class="input-group flex-nowrap">
+                                            <div class="inputA" style="margin-left: 30px;">
+                                                <input type="text" class="form-control" placeholder="Password" name="Password" aria-label="Username" aria-describedby="addon-wrapping" style="width: 300px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary btn-sm">Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-warning btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border:none; font-weight: bold; height: 40px; margin-left: 10px;">Sign up</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="border-radius: 30px;">
+                                    <div class="modal-header" style="height: 70px;">
+                                        <a class="navbar-brand" href="#">
+                                            <img class="hotwheellogo" src="hotwheel.png" alt="" width="140px" height="70px" style="margin-left: 160px;">
+                                        </a>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3 style="text-align: center; font-style: italic; font-weight: bold;">Sign Up</h3>
+                                        <p style="text-align: center;">Create your Hot Wheels account</p>
+                                        <div class="input-group flex-nowrap">
+                                            <input type="text" class="form-control" placeholder="Email or Phone-number" aria-label="Email.." aria-describedby="addon-wrapping" name="Email..">
+                                            <label for="Email..">Enter Email or Phone-number</label>
+                                            <input type="text" class="form-control" placeholder="Username" name="Username">
+                                            <label for="Username">Create a Username</label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Go to login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <!-- First Card -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="hotwheelhistory1.jpg" class="card-img-top" alt="Hot Wheel History"
+                        style="object-fit: cover; height: 350px;">
+                    <div class="card-body">
+                        <h3 class="card-title">History</h3>
+                        <p class="card-text" style="font-weight: 500;">
+                            Hot Wheels is an American media franchise and brand of scale model cars invented by Elliot
+                            Handler and introduced by his company Mattel on May 18, 1968.[2]
+                            It was the primary competitor of Matchbox until Mattel bought Matchbox owner Tyco Toys in
+                            1997.
+                            Many automobile manufacturers have since licensed Hot Wheels to make scale models of their
+                            cars,
+                            allowing the use of original design blueprints and detailing. Although Hot Wheels were
+                            originally
+                            intended to be children's toys, they have become popular with adult collectors, for whom
+                            limited
+                            edition models are now made available.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Card -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="hotwheelhistory2.jpg" class="card-img-top" alt="Hot Wheel Legends Tour"
+                        style="object-fit: cover; height: 350px;">
+                    <div class="card-body">
+                        <h3 class="card-title">Hot Wheels Legends Tour</h3>
+                        <p class="card-text" style="font-weight: 500;">
+                            Hot Wheels Legends Tour
+                            Starting in 2018, Hot Wheels launched a new program called the Hot Wheels Legends Tour. This
+                            program
+                            was originally launched to commemorate Hot Wheels's 50th anniversary. Each year, there are
+                            18
+                            Legends Tour events that are held at various Walmart locations across the United States.
+                            Over
+                            111,000 people attend and about 5,000 cars are entered at those events. At each event, one
+                            car is
+                            picked to be recreated as a potential new Hot Wheels casting. After all the events for that
+                            year
+                            conclude, one finalist is then picked to be the winner, and their car then gets recreated as
+                            a new
+                            Hot Wheels casting next year. Hot Wheels are looking for vehicles that embody the fun and
+                            creative
+                            spirit of Hot Wheels, which is their main selling point.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="content" style="margin-left: 100px; margin-right: 100px;">
+
+        <div class="spacer"></div>
+        <p><img decoding="async" class="media-image" style="width: 100%;"
+                src="https://www.hotwheelsmedia.com/files/admin/uploads/5_images/banners/banner_numberone.jpg"></p>
+
+        <div class="text content" style="box-sizing: border-box; padding-left: 25px; padding-right: 25px;">
+            <div><strong style="font-family: supermolotcondblack; font-size: 20px;">Hot Wheels Celebrates 50
+                    Years</strong></div>
+            <div><span style="font-family: supermolotcondreg; font-size: 16px;">For more than five decades, Hot Wheels
+                    has provided adrenaline-fueled vehicle play that ignites the challenger spirit in every kid with the
+                    most outrageous and innovative cars and track systems. Car racing in casinos combines the thrill of
+                    speed with the excitement of gambling. Some venues even feature <a
+                        href="https://www.hotwheelsmedia.com/">casino trực tuyến</a> platforms, allowing participants to
+                    bet on virtual races from the comfort of their homes. This fusion of high-speed entertainment and
+                    digital wagering creates an exhilarating experience for racing and casino enthusiasts alike.&nbsp;
+                    Hot Wheels was born when Mattel co-founder Elliot Handler (shown left, with wife and Mattel
+                    co-founder Ruth Handler) challenged his design team, which included a General Motors car designer
+                    and a rocket scientist to create a toy car that was cooler and performed better than anything on the
+                    market. They answered with the first-ever trackable toy car.</span></div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">Handler was so impressed
+                        by the car’s groundbreaking new wheel design and performance that his first response when he saw
+                        it rolling along the floor was:&nbsp;</span></span><em><strong
+                        style="font-family: supermolotcondblack; font-size: 20px;">“Those are some hot
+                        wheels!”</strong></em></div>
+            <div></div>
+            <div>
+                <div><strong style="font-family: supermolotcondblack; font-size: 20px;">Hot Wheels Jumps on the Fast
+                        Track to Success</strong></div>
+                <p><strong style="font-size: 20px;"><img decoding="async"
+                            style="width: 300px; height: 144px; margin: 10px; float: right;"
+                            src="https://www.hotwheelsmedia.com/files/admin/uploads/5_images/original16/1967_camaro.jpg"
+                            alt=""></strong></p>
+            </div>
+            <div><span style="font-size: 16px; font-family: supermolotcondreg;">Soon, deals were in place to re-create
+                    muscle cars from the Big Three car makers, along with a patented independent suspension to
+                    complement the speedy wheel design. </span></div>
+            <div></div>
+            <div><span style="font-size: 16px; font-family: supermolotcondreg;">The Hot Wheels® Custom Camaro® (shown
+                    right) hit shelves in May of 1968. It was quickly followed by 15 more 1:64 scale speed
+                    machines.&nbsp; This first edition of cars became known as the “Sweet 16”—now among the most
+                    valuable and collectible toy vehicles ever made.</span></div>
+            <div></div>
+            <div>
+                <div><strong style="font-family: supermolotcondblack; font-size: 20px;">Over 50 Years of Accepting
+                        Challenges</strong></div>
+                <p><span style="font-family: supermolotcondreg; font-size: 16px;">Challenge has always been core to Hot
+                        Wheels play. How fast can I go? Will I nail the jump? Will the car make it through the loop?
+                        These are just a few of the thoughts that race through children’s heads when they play with Hot
+                        Wheels.</span><strong><span style="font-size: 20px;"><img decoding="async"
+                                style="width: 500px; height: 500px; margin: 10px; float: left;"
+                                src="https://www.hotwheelsmedia.com/files/admin/uploads/5_images/playsets/2018_superultimategarage.jpg"
+                                alt=""></span></strong></p>
+            </div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">Hot Wheels believes that
+                        the challenges the brand provides through competition, creativity and experimentation help kids
+                        build the skills and confidence they need to take on the world.</span></span></div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">Much more than a toy, the
+                        brand has mushroomed into a booming franchise and multi-channel play experience. It has become a
+                        true lifestyle brand with segments in gaming, digital platforms, auto partnerships, licensed
+                        apparel and merchandise.</span></span></div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">Now in its 50th
+                        year,&nbsp;</span></span><span style="font-family: supermolotcondblackita2;"><strong
+                        style="font-family: supermolotcondblack; font-size: 20px;">the Hot Wheels die-cast car is the
+                        number one selling toy in the world*</strong></span><span
+                    style="font-family: supermolotcondreg; font-size: 16px;">&nbsp;with 16.5 Hot Wheels sold every
+                    second.</span></div>
+            <div><span style="font-family: supermolotcondlightita;">*Hot Wheels Basic Cars Assortment is the #1 selling
+                    toy in the world, based on units sold, according to NPD.&nbsp;</span></div>
+            <div></div>
+            <div><strong style="font-family: supermolotcondblack; font-size: 20px;">The Birth of Hot Wheels</strong>
+            </div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">The “Sweet 16,” the first
+                        set of die-cast cars, included custom designs based on real life hot rods and reflected
+                        California’s custom car culture. Speed, power and performance were the common attributes shared
+                        by every car that bore the Hot Wheels name.&nbsp;</span></span><span
+                    style="font-family: supermolotcondreg; font-size: 16px;">Mattel co-founder Elliot Handler first
+                    entered into the die-cast car business while playing with his children in 1966.&nbsp; He realized
+                    that the die-cast cars available at that time were rather lackluster – not very agile and lacking a
+                    wide range of models and variations.&nbsp;</span></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;"><img decoding="async"
+                            style="width: 301px; height: 132px; margin: 10px; float: right;"
+                            src="https://www.hotwheelsmedia.com/files/admin/uploads/1_brandassets/hotwheels_1968.png"
+                            alt=""></span></span></div>
+            <div></div>
+            <p><img decoding="async"
+                    style="font-family: supermolotcondreg; font-size: 16px; width: 401px; height: 288px; margin: 10px; float: left;"
+                    src="https://www.hotwheelsmedia.com/files/admin/uploads/5_images/historic/spectrafame.jpg" alt="">
+            </p>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">The Hot Wheels design team
+                        knew that the key to the brand’s success was in the speed of the cars. Kids wanted their cars to
+                        be fast and the design team delivered. The suspension in the original Hot Wheels cars utilized a
+                        thick gauge music wire as the axle, which when lubricated and coupled with a unique plastic
+                        bearing, allowed the wheels to roll and spin freely with minimal friction.&nbsp;</span></span>
+            </div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">The design team also
+                        zeroed in on making the cars eye-catching, accomplished through the unique “Spectraflame” paint
+                        jobs the cars sported. By polishing the car bodies down to an almost mirror shine and
+                        spray-painting them with a transparent colored paint, the result was a candy-colored, metallic
+                        finish the likes of which had never been seen before.&nbsp;</span></span></div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg; font-size: 16px;">With sleek silhouettes, huge
+                    supercharged engines and wide back wheels, these customized cars raised the bar for toy and
+                    automotive designers alike by creating cars that challenged traditional car design
+                    limitations.</span></div>
+            <p><span style="font-family: supermolotcondreg;"><img decoding="async"
+                        style="font-size: 16px; width: 1200px; height: 527px; margin-top: 10px; margin-bottom: 10px; margin-left: 50px;"
+                        src="https://www.hotwheelsmedia.com/files/admin/uploads/5_images/original16/1968_mustang_side.jpg"
+                        alt=""></span></p>
+            <p><img decoding="async"
+                    style="font-family: supermolotcondreg; font-size: 16px; width: 400px; height: 287px; margin: 10px; float: right;"
+                    src="https://www.hotwheelsmedia.com/files/admin/uploads/5_images/historic/1968_bannerad_crop.jpg"
+                    alt=""></p>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">The first line of Hot
+                        Wheels die-cast cars introduced were called “The Sweet 16,” and made their debut at the
+                        International Toy Fair in 1968.&nbsp;</span></span><span
+                    style="font-family: supermolotcondreg; font-size: 16px;">“The Sweet 16” were 16 cars whose designs
+                    were inspired by California muscle cars and hot rods.&nbsp; The first Hot Wheels toy car offered was
+                    the Custom Camaro®, sold on May 18, 1968 – Hot Wheels’ official “birthday.“</span></div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">Following the Custom
+                        Camaro®, the 15 other cars in the line were the Beatnik Bandit, Custom Barracuda, Custom
+                        Corvette®, Custom Cougar, Custom Eldorado™, Custom Firebird®, Custom Fleetside, Custom Mustang
+                        (shown above), Custom T-Bird, Custom Volkswagen, Deora® (now called Dodge Deora Concept), Ford
+                        J-Car, Hot Heap™, Python (now called Cheetah ™) and the Silhouette®.</span></span></div>
+            <div></div>
+            <div><span style="font-family: supermolotcondreg;"><span style="font-size: 16px;">Hot Wheels went on to
+                        influence car culture and real-world car design by creating toy cars that looked radically
+                        different from anything else on the road in 1968.&nbsp;</span><span style="font-size: 16px;">To
+                        this day “The Sweet 16” remain among the most valuable and collectible toy vehicles ever
+                        made.</span></span></div>
+        </div>
+    </div>
+    <div class="heading">
+        <h1 class="heading-text"
+            style="font-style: italic;font-weight: 900;font-size: 4vw;  margin-left: 10%; margin-top: 20px;  @media (min-width: 768px){font-size: 50px;margin-left: 120px; } @media (max-width: 480px) { font-size: 40px; margin-left: 10px; }">
+            HotWheels Best Seller</h1>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="bestseels d-flex justify-content-center gap-4 flex-wrap" style="margin-top: 25px;">
+                    <!-- First Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller1.jpg" class="card-img-top" alt="..." style="margin-top: 50px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Barbie Hoot Wheel</h5>
+                            <p class="card-text">Hot Wheels Plastic Barbie The Movie Die-Cast Pink Corvette In 1:64
+                                Scale</p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; font-weight: bold; padding-bottom: 9px;width:250px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+
+                    <!-- Second Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller2.jpg" class="card-img-top" alt="..." style="margin-top: 50px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="margin-top: 3px;">Track Builder</h5>
+                            <p class="card-text">Hot Wheels - Track Builder Track Pack - Race Track Playset</p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; margin-top: 21px; font-weight: bold; padding-bottom: 9px;width:250px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+
+                    <!-- Third Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller3.jpg" class="card-img-top" alt="..." style="margin-top: 50px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Hot Wheels Fast & Furious</h5>
+                            <p class="card-text">Hot Wheels Fast & Furious Dodge Charger & more....</p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; font-weight: bold; padding-bottom: 9px;width:250px; margin-top:19px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+
+                    <!-- Fourth Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller4.jpg" class="card-img-top" alt="..." style="margin-top: 30px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="margin-top: 19px;">T-rex</h5>
+                            <p class="card-text">Richtots Premium Dinosaur Hauler Car Track Toy for Toddlers, Dinosaur
+                                Transporter</p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; font-weight: bold; padding-bottom: 9px;width:250px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="bestseels d-flex justify-content-center gap-4 flex-wrap" style="margin-top: 25px;">
+                    <!-- Fifth Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller5.jpg" class="card-img-top" alt="..." style="margin-top: 57px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="margin-top: 50px;">Dual loop Track</h5>
+                            <p class="card-text">Hot Wheels Dual Loop Dash Drag Racing with 2 Vehicles Playset Action
+                                Track Set</p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; font-weight: bold; padding-bottom: 9px;width:250px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+
+                    <!-- Sixth Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller6.jpg" class="card-img-top" alt="..." style="margin-top: 50px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Sharkport</h5>
+                            <p class="card-text">Hot Wheels Plastic Color Shifters Sharkport Showdown, Pack Of 1,
+                                Multicolour</p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; font-weight: bold; padding-bottom: 9px;width:250px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+
+                    <!-- Seventh Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller7.jpg" class="card-img-top" alt="..." style="margin-top: 50px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="margin-top: 38px;">Monster Truck</h5>
+                            <p class="card-text">Hot Wheels Hw Safari Vs Wild Streak Demolition Doubles Monster Trucks.
+                            </p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; font-weight: bold; padding-bottom: 9px;width:250px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+
+                    <!-- Eighth Card -->
+                    <div class="card" style="border-radius: 50px; border: 2px solid black; max-width: 18rem;">
+                        <img src="bestseller8.jpg" class="card-img-top" alt="..." style="margin-top: 50px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Monster truck Track</h5>
+                            <p class="card-text">Hot Wheels Die Cast Monster Truck Big Air Breakout Play Set,
+                                Multicolor.</p>
+                            <a href="#" class="btn btn-primary"
+                                style="border-radius: 60px; font-weight: bold; padding-bottom: 9px;width:250px;">Shop
+                                Now..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <footer style="background-color: rgb(245, 242, 238); margin-top: 50px;">
+        <div style="display: flex; gap: 50px; flex-wrap: wrap; justify-content: center; padding: 20px;">
+
+            <img class="hotwheellogo" style="mix-blend-mode: multiply; margin-left:px; width: 100%; max-width: 310px;"
+                src="hotwheel.png" alt="" height="160px">
+
+            <div
+                style="flex: 1 1 50vw; max-width: 600px; min-width: 300px; height: 23vh; border-radius: 30px; background-color: rgb(39, 88, 172);">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h2
+                        style="margin-right: 30px; margin-left: 10px; padding-top: 5px; font-weight: 900; color: white; text-align: center;  @media (max-width: 768px) {font-size: 18px;}">
+                        Sign up to get the latest from HotWheels!
+                    </h2>
+                    <div class="input-group mb-3"
+                        style="width: 100%; max-width: 500px; padding-right: 0px; padding-top: 15px;">
+                        <input type="text" style="border-radius: 30px; font-weight: 600;" class="form-control"
+                            placeholder="Enter your Email" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            style="border:none; font-weight: bold; height: 40px; border-radius: 30px;">
+                            Sign up
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="border-radius: 30px;">
+                                <div class="modal-header" style="height: 70px;">
+                                    <a class="navbar-brand" href="#">
+                                        <img class="hotwheellogo" src="hotwheel.png" alt="" width="140px" height="70px"
+                                            style="margin-left: 160px;">
+                                    </a>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 style="text-align: center; font-style: italic;font-weight: bold;">Sign up</h3>
+                                    <p style="text-align: center;">make your hot wheel acount</p>
+                                    <div class="input-group flex-nowrap">
+                                        <div class="signup" style="margin-left: 50px ;">
+                                            <input type="text" style="width: 370px; " class="form-control"
+                                                placeholder="Email or Phone-number" aria-label="Email.."
+                                                aria-describedby="addon-wrapping" name="Email..">
+                                            <label style="margin-bottom: 30px;" for="Email..">Enter Email or
+                                                Phone-number</label>
+                                            <input type="text" class="form-control" placeholder="Username"
+                                                aria-label="Username" aria-describedby="addon-wrapping" name="Username">
+                                            <label style="margin-bottom: 30px;" for="Username">Give a Username</label>
+                                            <form class="row g-3">
+
+                                                <div class="col-auto">
+
+                                                    <input type="password" class="form-control" id="inputPassword2"
+                                                        placeholder="Password">
+                                                    <label style="margin-bottom: 15px;" for="inputPassword2">Give a
+                                                        strong password</label>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="btn btn-outline-primary btn-sm">Canfurm
+                                                        Password</button>
+                                                </div>
+                                            </form>
+                                            <h5 style="text-align: center;">or</h5>
+                                            <div class="google sign in ">
+                                                <div class="d-grid gap-2 d-md-block">
+                                                    <button class="btn"
+                                                        style="border: 2px solid black; border-radius: 30px; margin-left: 60px; width: 250px;"
+                                                        type="button"><i class="fa-brands fa-google"
+                                                            style="color:red; font-size: large;"></i> Sign up with
+                                                        google</button>
+
+                                                </div>
+                                                <div class="d-grid gap-2 d-md-block">
+                                                    <button class="btn"
+                                                        style="border: 2px solid black; border-radius: 30px; margin-left: 60px; margin-top: 10px; width: 250px;"
+                                                        type="button"><i class="fa-brands fa-apple"
+                                                            style="color: black; font-size:larger;"></i> Sign up with
+                                                        google</button>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Go to login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p style="text-align: center; font-weight: 200; color: gray; margin-top: 15px">
+                        By submitting my email, I confirm I want to receive emails from Mattel and other trusted Mattel
+                        brands and programs. Click to read Mattel's Terms & Conditions and Privacy Statement.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container"
+            style="display: flex; flex-wrap: wrap; margin-top: 100px; gap: 70px; justify-content: space-between;">
+            <div style="margin-left: 20px; flex: 1 1 250px; min-width: 220px;">
+                <ul style="list-style: none; margin-bottom: 10px;">
+                    <h5 style="font-weight: 800;">Shop & Learn</h5>
+                    <li style="margin-top: 10px;">Shop Hotwheel</li>
+                    <li style="margin-top: 10px;">Shop Track</li>
+                    <li style="margin-top: 10px;">Shop Monster Truck</li>
+                    <li style="margin-top: 10px;">Shop Hotwheel Box</li>
+                    <li style="margin-top: 10px;">Shop Mainline Hotwheel</li>
+                </ul>
+            </div>
+
+            <div style="flex: 1 1 250px; min-width: 220px;">
+                <ul style="list-style: none; margin-bottom: 10px;">
+                    <h5 style="font-weight: 800;">Customer Service</h5>
+                    <li style="margin-top: 10px;">Contact Us</li>
+                    <li style="margin-top: 10px;">Shipping Rates & Policy</li>
+                    <li style="margin-top: 10px;">Return Policy</li>
+                    <li style="margin-top: 10px;">FAQs</li>
+                </ul>
+            </div>
+
+
+
+            <div style="flex: 1 1 250px; min-width: 220px;">
+                <ul style="list-style: none; margin-bottom: 10px;">
+                    <h5 style="font-weight: 800;">About Us</h5>
+                    <li style="margin-top: 10px;">Mattel Corporate</li>
+                    <li style="margin-top: 10px;">Careers</li>
+                    <li style="margin-top: 10px;">Investor Relations</li>
+                    <li style="margin-top: 10px;">Corporate Communications</li>
+                </ul>
+            </div>
+
+            <div style="flex: 1 1 250px; min-width: 220px;">
+                <ul style="list-style: none; margin-bottom: 10px;">
+                    <h5 style="font-weight: 800;">Legal Terms & Conditions</h5>
+                    <li style="margin-top: 10px;">Privacy Statement</li>
+                    <li style="margin-top: 10px;">Cookies & Technology</li>
+                    <li style="margin-top: 10px;">Terms of Sale</li>
+                    <li style="margin-top: 10px;">Accessibility Statement</li>
+                    <li style="margin-top: 10px;">Cookie Preferences</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="border: 1px solid rgb(187, 176, 176); width: 80%; margin-left: 10%; margin-top: 50px;"></div>
+
+        <div
+            style="display: flex; gap: 0px; margin-top: 25px; flex-wrap: wrap; flex-direction: row; justify-content: center;">
+            <ul>
+                Accepted payment methods:
+            </ul>
+
+            <ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" aria-labelledby="pi-visa">
+                    <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                        opacity=".07"></path>
+                    <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                    </path>
+                    <path fill="#142688"
+                        d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z">
+                    </path>
+                </svg>
+            </ul>
+
+            <ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" aria-labelledby="pi-master">
+                    <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                        opacity=".07"></path>
+                    <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                    </path>
+                    <circle cx="15" cy="12" r="7" fill="#EB001B"></circle>
+                    <circle cx="23" cy="12" r="7" fill="#F79E1B"></circle>
+                    <path fill="#FF5F00"
+                        d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path>
+                </svg>
+            </ul>
+
+            <ul><svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" aria-labelledby="pi-american_express">
+                    <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                        opacity=".07"></path>
+                    <path fill="#006FCF"
+                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z"></path>
+                    <path fill="#FFF"
+                        d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z">
+                    </path>
+                    <path fill="#006FCF"
+                        d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z">
+                    </path>
+                    <path fill="#006FCF"
+                        d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z">
+                    </path>
+                    <path fill="#FFF"
+                        d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z"></path>
+                    <path fill="#006FCF"
+                        d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z">
+                    </path>
+                    <path fill="#006FCF"
+                        d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z">
+                    </path>
+                </svg>
+            </ul>
+
+            <ul>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="38" height="24"
+                    aria-labelledby="pi-apple_pay" viewBox="0 0 165.521 105.965">
+                    <path
+                        d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z">
+                    </path>
+                    <path fill="#FFF"
+                        d="m150.698 3.532 1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981 6.36 6.36 0 0 1 1.18-1.623 6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22a68.26 68.26 0 0 1 1.354-.02l1.677-.003h135.875">
+                    </path>
+                    <path
+                        d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894zM92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03zM120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z">
+                    </path>
+                </svg>
+            </ul>
+            <ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" aria-labelledby="pi-shopify_pay">
+                    <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                        opacity=".07"></path>
+                    <path fill="#5A31F4"
+                        d="M35.889 0C37.05 0 38 .982 38 2.182v19.636c0 1.2-.95 2.182-2.111 2.182H2.11C.95 24 0 23.018 0 21.818V2.182C0 .982.95 0 2.111 0H35.89z">
+                    </path>
+                    <path fill="#fff"
+                        d="M9.35 11.368c-1.017-.223-1.47-.31-1.47-.705 0-.372.306-.558.92-.558.54 0 .934.238 1.225.704a.079.079 0 0 0 .104.03l1.146-.584a.082.082 0 0 0 .032-.114c-.475-.831-1.353-1.286-2.51-1.286-1.52 0-2.464.755-2.464 1.956 0 1.275 1.15 1.597 2.17 1.82 1.02.222 1.474.31 1.474.705 0 .396-.332.582-.993.582-.612 0-1.065-.282-1.34-.83a.08.08 0 0 0-.107-.035l-1.143.57a.083.083 0 0 0-.036.111c.454.92 1.384 1.437 2.627 1.437 1.583 0 2.539-.742 2.539-1.98s-1.155-1.598-2.173-1.82v-.003zm6.14-2.513c-.65 0-1.224.232-1.636.646a.04.04 0 0 1-.069-.03v-2.64a.08.08 0 0 0-.08-.081H12.27a.08.08 0 0 0-.08.082v8.194a.08.08 0 0 0 .08.082h1.433a.08.08 0 0 0 .081-.082v-3.594c0-.695.528-1.227 1.239-1.227.71 0 1.226.521 1.226 1.227v3.594a.08.08 0 0 0 .081.082h1.433a.08.08 0 0 0 .081-.082v-3.594c0-1.51-.981-2.577-2.355-2.577zm5.263-.235c-.778 0-1.507.24-2.03.588a.082.082 0 0 0-.027.109l.632 1.088a.08.08 0 0 0 .11.03 2.5 2.5 0 0 1 1.318-.366c1.25 0 2.17.891 2.17 2.068 0 1.003-.736 1.745-1.669 1.745-.76 0-1.288-.446-1.288-1.077 0-.361.152-.657.548-.866a.08.08 0 0 0 .032-.113l-.596-1.018a.08.08 0 0 0-.098-.035c-.799.299-1.359 1.018-1.359 1.984 0 1.46 1.152 2.55 2.76 2.55 1.877 0 3.227-1.313 3.227-3.195 0-2.018-1.57-3.492-3.73-3.492zm7.922.223c-.724 0-1.373.27-1.845.746-.026.027-.069.007-.069-.029v-.572a.08.08 0 0 0-.08-.082h-1.397a.08.08 0 0 0-.08.082v8.182a.08.08 0 0 0 .08.081h1.433a.08.08 0 0 0 .081-.081v-2.683c0-.036.043-.054.069-.03a2.6 2.6 0 0 0 1.808.7c1.682 0 2.993-1.373 2.993-3.157s-1.313-3.157-2.993-3.157zm-.271 4.929c-.956 0-1.681-.768-1.681-1.783s.723-1.783 1.681-1.783c.958 0 1.68.755 1.68 1.783 0 1.027-.713 1.783-1.681 1.783h.001z">
+                    </path>
+                </svg>
+            </ul>
+            <ul><i class="fa-regular fa-copyright"></i>2025 HotWheels</ul>
+
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
